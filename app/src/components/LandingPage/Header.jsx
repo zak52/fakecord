@@ -3,40 +3,32 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import './LandingPage.css';
 import discordLogo from '../../assets/discordLogo.png';
+import './headerStyleSheet.css';
+import NavBar from './NavBar.js';
 
 const Header = () => {
-    const headingStyles = {
-        backgroundColor: 'blue',
-        color: 'white',
-        padding: '25px',
-    };
 
   return (
-    <div>
-        <header 
-            className='masthead d-flex'
-            style={
-                headingStyles
-            }
-        >
-            <div className='container'>
-                <div className='row'>
-                    <div className='col-sm '>
-                    <img src={discordLogo} alt="discord logo" className='discordLogo'/>
-                        <h5 className='fw-bold'>Discord</h5>
-                    </div>
-                    <div className='col-sm'>
-
-                    </div>
-                    <div className='col-sm text-right align-right'>
-                        <button className='rounded-pill'>
-                            Login
-                        </button>
-                    </div>
-                </div>
+    <div className='headerDiv'>
+        <div className='row'>
+            <div className='col'>
+                <img src={discordLogo} alt='discordLogo'
+                className='discordLogo'
+                />
+                <h1 className='discordTitle'>
+                    Discord
+                </h1>
             </div>
-            
-        </header>
+            <div className='col navBarCol'>
+                <NavBar/>
+            </div>
+            <div className='col text-right buttonCol'>
+                <button className='btn btn-primary btn-circle btn-xl'>
+                    Login
+                </button>
+            </div>
+        </div>
+
     </div>
   );
 };

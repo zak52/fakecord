@@ -1,0 +1,40 @@
+.discordLogo {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 15px;
+    left: 10px;
+}
+
+.text-right{
+    text-align: right;
+    align-content: flex-end;
+}
+
+.headerDiv{
+    background-color:blueviolet;
+    margin-bottom: 100px;
+    padding-bottom: 2px;
+    text-align: left;
+    color: white;
+
+}
+
+.discordTitle{
+    padding-left: 80px;
+}
+
+.col{
+    margin-bottom: 20px;
+    padding-top: 20px;
+}
+
+.buttonCol{
+    top:10px;
+    right:10%;
+    position: absolute;
+}
+
+.navBarCol{
+    padding-right: 50%;
+}
