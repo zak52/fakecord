@@ -1,11 +1,9 @@
 
 import { useState } from 'react';
 import './App.css';
-<<<<<<< Updated upstream
+
 import ServerMenu from './components/ServerMenu';
 
-=======
->>>>>>> Stashed changes
 import {
   BrowserRouter as Router,
   Routes,
@@ -20,9 +18,6 @@ import OnlineFriends from './components/OnlineFriends';
 //
 
 
-const Dashboard = () => {
-  return <h1>Dashboard</h1>;
-};
 
 const Server1 = () => {
   return <h1>Server1</h1>;
@@ -32,9 +27,6 @@ const Server2 = () => {
   return <h1>Server2</h1>;
 };
 
-<<<<<<< Updated upstream
-=======
-
 const Otterwall = () => {
   return <h1 className='display-info'>Otterwall</h1>;
 };
@@ -43,7 +35,6 @@ const CaptVegas = () => {
     return <h1 className='display-info'>CaptVegas</h1>;
   };
 
->>>>>>> Stashed changes
 function App() {
 
   const[inactive, setInactive ] = useState(true);
@@ -60,9 +51,7 @@ function App() {
         />
         <div className={`container ${inactive ? "inactive" : ""}`}>
           <Routes>
-<<<<<<< Updated upstream
             <Route path={'/'} element={<Dashboard/>}/>
-=======
             <Route exact path={'/'} element={<DirectMessages/>}>
                 <Route exact path={'Friends'} element={<FriendsDashboard/>}>
                   <Route exact path={'Active'} element={<OnlineFriends/>}/>
@@ -70,7 +59,7 @@ function App() {
                 <Route exact path={'Otterwall'} element={<Otterwall/>}/>
                 <Route exact path={'Capt_Vegas'} element={<CaptVegas/>}/>
             </Route>
->>>>>>> Stashed changes
+
             <Route exact path={'/server1'} element={<Server1/>}/>
             <Route exact path={'/server2'} element={<Server2/>}/>
           </Routes>
