@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import discordLogo from '../assets/discordLogo.png';
-import avatar from '../assets/avatar.jpeg'; 
+// import avatar from '../assets/avatar.jpeg'; 
 import ServerItem from './ServerItem.js';
 
 
@@ -86,6 +86,7 @@ const ServerMenu = (props) => {
                 </ul>
             </div>
 
+            {/*
             <div className='side-menu-footer'>
                 <div className='avatar'>
                     <img src={avatar} alt="avatar" />
@@ -94,6 +95,7 @@ const ServerMenu = (props) => {
                     <h5>ExZachtlyLast</h5>
                 </div>
             </div>
+*/}
         </div>
     );
 };

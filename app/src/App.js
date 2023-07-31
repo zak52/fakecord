@@ -2,7 +2,7 @@
 import { useState } from 'react';
 import './App.css';
 import ServerMenu from './components/ServerMenu';
-
+import FriendsList from './components/FriendsList';
 import {
   BrowserRouter as Router,
   Routes,
@@ -10,9 +10,6 @@ import {
 } from "react-router-dom";
 
 
-const Dashboard = () => {
-  return <h1>Dashboard</h1>;
-};
 
 const Server1 = () => {
   return <h1>Server1</h1>;
@@ -21,6 +18,18 @@ const Server1 = () => {
 const Server2 = () => {
   return <h1>Server2</h1>;
 };
+
+const Friends = () => {
+  return <h1 className='display-info'>Friends</h1>;
+};
+
+const Otterwall = () => {
+  return <h1 className='display-info'>Otterwall</h1>;
+};
+
+const CaptVegas = () => {
+    return <h1 className='display-info'>CaptVegas</h1>;
+  };
 
 function App() {
 
@@ -38,7 +47,11 @@ function App() {
         />
         <div className={`container ${inactive ? "inactive" : ""}`}>
           <Routes>
-            <Route path={'/'} element={<Dashboard/>}/>
+            <Route exact path={'/'} element={<FriendsList/>}>
+                <Route exact path={'Friends'} element={<Friends/>}/>
+                <Route exact path={'Otterwall'} element={<Otterwall/>}/>
+                <Route exact path={'Capt_Vegas'} element={<CaptVegas/>}/>
+            </Route>
             <Route exact path={'/server1'} element={<Server1/>}/>
             <Route exact path={'/server2'} element={<Server2/>}/>
           </Routes>
