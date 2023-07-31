@@ -1,4 +1,6 @@
 import React from 'react';
+
+
 import FriendsItem from './FriendsItem.js';
 import CommonFooter from './CommonFooter.js'; 
 import { NavLink } from 'react-router-dom';
@@ -121,6 +123,7 @@ const FriendsList = (props) => {
                 </div>
             </div>
 */}
+
 
         </div>
     );

@@ -1,13 +1,21 @@
 
 import { useState } from 'react';
 import './App.css';
+
 import ServerMenu from './components/ServerMenu';
-import FriendsList from './components/FriendsList';
+
 import {
   BrowserRouter as Router,
   Routes,
   Route
 } from "react-router-dom";
+
+// components
+import ServerMenu from './components/ServerMenu';
+import DirectMessages from './components/DirectMessage';
+import FriendsDashboard from './components/FriendsDashboard';
+import OnlineFriends from './components/OnlineFriends';
+//
 
 
 
@@ -17,10 +25,6 @@ const Server1 = () => {
 
 const Server2 = () => {
   return <h1>Server2</h1>;
-};
-
-const Friends = () => {
-  return <h1 className='display-info'>Friends</h1>;
 };
 
 const Otterwall = () => {
@@ -47,11 +51,15 @@ function App() {
         />
         <div className={`container ${inactive ? "inactive" : ""}`}>
           <Routes>
-            <Route exact path={'/'} element={<FriendsList/>}>
-                <Route exact path={'Friends'} element={<Friends/>}/>
+            <Route path={'/'} element={<Dashboard/>}/>
+            <Route exact path={'/'} element={<DirectMessages/>}>
+                <Route exact path={'Friends'} element={<FriendsDashboard/>}>
+                  <Route exact path={'Active'} element={<OnlineFriends/>}/>
+                </Route>
                 <Route exact path={'Otterwall'} element={<Otterwall/>}/>
                 <Route exact path={'Capt_Vegas'} element={<CaptVegas/>}/>
             </Route>
+
             <Route exact path={'/server1'} element={<Server1/>}/>
             <Route exact path={'/server2'} element={<Server2/>}/>
           </Routes>
